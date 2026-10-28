@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillTrack | Learning Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">SkillTrack</div>
+        
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <p class="eyebrow">YOUR JOURNEY STARTS HERE</p>
+            <h1>Build skills.<br><span>Track progress.</span></h1>
+            <p class="subtitle">
+                Small steps every day. Big progress over time.
+            </p>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <p>Skills Learning</p>
+                <h2 id="totalSkills">0</h2>
+            </div>
+            <div class="stat-card">
+                <p>Tasks Completed</p>
+                <h2 id="completedTasks">0</h2>
+            </div>
+            <div class="stat-card">
+                <p>Average Progress</p>
+                <h2 id="averageProgress">0%</h2>
+            </div>
+        </section>
+
+        <section class="dashboard">
+
+            <div class="panel">
+                <h2>My Skills</h2>
+                <p class="muted">Add a skill and track your growth.</p>
+
+                <form id="skillForm">
+                    <label for="skillName">Skill name</label>
+                    <input type="text" id="skillName"
+                           placeholder="e.g. JavaScript" maxlength="45" required>
+
+                    <label for="skillLevel">Current progress</label>
+                    <select id="skillLevel">
+                        <option value="0">Just starting — 0%</option>
+                        <option value="25">Beginner — 25%</option>
+                        <option value="50">Intermediate — 50%</option>
+                        <option value="75">Advanced — 75%</option>
+                        <option value="100">Completed — 100%</option>
+                    </select>
+
+                    <button type="submit">+ Add Skill</button>
+                </form>
+
+                <div id="skillsList"></div>
+            </div>
+
+            <div class="panel">
+                <h2>Today's Tasks</h2>
+                <p class="muted">Make today count.</p>
+
+                <form id="taskForm">
+                    <label for="taskName">New task</label>
+                    <input type="text" id="taskName"
+                           placeholder="e.g. Practice coding" maxlength="100" required>
+                    <button type="submit">+ Add Task</button>
+                </form>
+
+                <div id="tasksList"></div>
+
+                <p class="motivation">
+                    ✨ Consistency beats perfection. Keep going!
+                </p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        SkillTrack © 2026 | Built with HTML, CSS & JavaScript
+    </footer>
+
+</body>
+</html>
